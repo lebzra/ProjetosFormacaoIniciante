@@ -1,0 +1,63 @@
+<meta charset="UTF-8">
+<input />
+<button>Testar Sorteio</button>
+
+<script type="text/javascript">
+	
+	function sorteia() {
+
+		return Math.round(Math.random()*20);
+	}
+
+	function sorteiaNumeros(quantidade){
+		var sorteios = []; // lista de numeros a serem sorteados
+		var numero = 1; // quantidade de itens no na lista
+
+		while(numero <= quantidade){
+
+			var numeroSorteado = sorteia();
+
+			if(numeroSorteado !== 0){
+	
+				var achou = false;
+				for(var item = 0; item < sorteios.length; item++){
+
+					if(sorteios[item] == numeroSorteado){
+						achou = true;
+						break;
+					}
+				}
+				if(achou == false){
+					sorteios.push(numeroSorteado);
+					numero++;
+				}
+			}
+		}
+		return sorteios;
+	}
+
+	var inputE = document.querySelector("input");
+	inputE.focus();
+	
+	var sorteios = sorteiaNumeros(10);
+	console.log(sorteios);
+
+	function verifica() {
+		var achou = false;
+		for (var posicao = 0; posicao < sorteios.length; posicao++) {
+			
+			if (inputE.value == sorteios[posicao]) { // === não funciona, pois o conteudo não é verificado como algum ooutro valor vindo do componente, //sem ser número ou string, usar o ==.
+				alert("Você acertou");
+				achou = true;
+				break;
+			}
+		}
+		if(achou === false) {
+			alert("Você errou!");
+		}
+		inputE.value = "";
+		inputE.focus();
+	}
+	var button = document.querySelector("button");
+	button.onclick = verifica;
+</script>

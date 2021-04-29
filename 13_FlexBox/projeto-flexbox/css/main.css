@@ -1,0 +1,32 @@
+.container{
+    display: flex;
+    align-items: center;
+}
+
+.div2, .div3,.div4{
+    width: 50px;
+    height:50px;
+    /*
+    flex-grow: 1;
+    flex-shrink: 1;
+    */
+}
+
+.div1{
+    width: 50px;
+    height:50px;
+    background-color: black;
+    /*
+    flex-grow: 1;
+    flex-shrink: 1;
+    */
+}
+.div2{
+    background-color: aqua;
+}
+.div3{
+    background-color: blueviolet
+}
+.div4{
+    background-color: coral;
+}

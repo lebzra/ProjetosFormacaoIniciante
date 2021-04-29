@@ -1,0 +1,25 @@
+<button class="botao">Calcula</button>
+<input class="numero">
+<input class="tabuada">
+<span class="resultado"></span>
+<p>Texto</p>
+<script>
+
+    var botao = usarSeletor(".botao");
+    var numero = usarSeletor('.numero');
+    var tabuada = usarSeletor('.tabuada');
+    var resultado = usarSeletor('.resultado');
+
+    function usarSeletor(seletor){
+    	return document.querySelector(seletor);
+    }
+
+    function calculaTabuada(numero, tabuada){
+    	return numero * tabuada;
+    }
+    
+    botao.addEventListener('click', function() {
+    	resultado.textContent = calculaTabuada(numero.value, tabuada.value);
+    });
+
+</script>

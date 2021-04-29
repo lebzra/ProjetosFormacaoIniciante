@@ -1,0 +1,86 @@
+.about{
+    @include for-phone-only{
+        width: 90%;
+    }
+    width:80%;
+    margin: 10px auto 40px;
+    font-family: Arial, Helvetica, sans-serif;
+
+    &__title{
+        background-color: $light-gray;
+        text-align: center;
+        padding: 20px;
+    }
+    &__h1{
+        font-size: 22px;
+        color: $dark-gray;
+        letter-spacing: 1px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .breadcrumb{
+        @include flx(justify-content, center);
+        align-items: center;
+        &__link{
+            font-size: 14px;
+            text-decoration: none;
+            color: $dark-gray;
+            &:hover{
+                text-decoration: underline;
+                color: $salmon;
+            } 
+        }
+        &__img{
+            width: 10px;
+            margin: 8px;
+        }   
+    }
+    &__img{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    &__intro{
+        font-weight: 100;
+        color: $dark-gray;
+        width: 70%;
+        margin: 30px auto;
+        text-align: center;
+        font-size: 16px;
+        @include for-phone-only{
+            width: 90%;
+            margin: 10px auto;
+        }
+        @include for-tablet-only{
+            width: 80%;
+        }
+    }
+    &__split{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+
+    }
+    &__img-description{
+        width: $img-width;
+        @include for-phone-only {   
+            width: 90%;
+            text-align: center;
+        }
+    }
+    &__txt{
+        @include for-phone-only {   
+            width: 90%;
+            text-align: center;
+        }
+        width: calc(100% - #{$img-width});
+        
+    }
+    &__p{
+        font-size: 14px;
+        padding: 10px 20px;
+        color: $dark-gray;
+    }
+}

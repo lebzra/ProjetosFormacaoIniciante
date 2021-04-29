@@ -1,0 +1,34 @@
+<meta charset="UTF-8">
+<script type="text/javascript">
+
+	function pulaLinha() { 
+    	document.write("<br><hr><br>");
+	}
+
+	function mostra(frase) {
+    	document.write("<big>"+frase+"</big>");
+    	pulaLinha();
+	}
+
+	function calcularIMC(peso, altura){
+		var imc = peso / (altura * altura);
+		return imc;
+	}
+
+	var nome = prompt("Informe o seu nome:");
+	var peso = parseFloat(prompt("Informe o seu peso:"));
+	var altura = parseFloat(prompt("Informe o seu altura:"));
+	// número quebrado devemos usar o Float;
+	var valorImc = calcularIMC(peso,altura);
+	
+	if(valorImc < 18.5){
+		mostra("O seu IMC está abaixo do peso ideal: "+valorImc);	
+	}
+	if(valorImc > 29.9){
+		mostra("O seu IMC está acima do peso ideal: "+valorImc);	
+	}
+	if(valorImc >= 18.5 && valorImc <= 29.9){
+		mostra("O seu IMC está dentro da faixa de peso ideal!! Valor: "+ valorImc);
+	}
+
+</script>

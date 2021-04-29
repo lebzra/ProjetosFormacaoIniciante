@@ -1,0 +1,42 @@
+
+
+//@mixin Borda
+@mixin borda-redonda($borda-arredondada: 0.3rem){
+    -webkit-border-radius:$borda-arredondada;
+    -moz-border-radius:$borda-arredondada;
+    -o-border-radius:$borda-arredondada;
+    border-radius:$borda-arredondada;
+  }
+  
+  @mixin borda-bemredonda($borda-oval){
+    border-radius: $borda-oval;
+  }
+  //@ mixin Sombra button - Esse mixin pode estar sendo usado em mais de uma parte, acaba replicando o código, a alternativa
+  // é criar um placeholder
+  /*
+  @mixin sombra-button {
+    -webkit-box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
+    -o-box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
+  }
+  */
+
+  %sombra-button {
+    -webkit-box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
+    -o-box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
+  }
+  /*
+  @mixin image-replacement{
+    text-indent: -9999px;
+    overflow: hidden;
+    background-repeat: no-repeat;  
+  }
+  */
+  %image-replacement{
+    text-indent: -9999px;
+    overflow: hidden;
+    background-repeat: no-repeat;  
+  }

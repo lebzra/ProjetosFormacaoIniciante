@@ -1,0 +1,25 @@
+<meta charset="UTF-8">
+<script>
+
+    var loginCadastrado = "alura";
+    var senhaCadastrada = "alura321";
+    var cont = 1;
+    var numTen = 3;
+
+    while(cont <= numTen){
+
+    	var loginInformado = prompt("Informe seu login");
+    	var senhaInformada = prompt("Informe sua senha");
+
+    	if( loginCadastrado == loginInformado && senhaCadastrada == senhaInformada ) {
+			alert("Bem-vindo ao sistema " + loginInformado);    	
+			cont = numTen; // passa quantidade maxima, no final, com + 1 ele sai do loop. Sem precisar usar o Break;
+    	} else {
+     		alert("Login inválido. Tente novamente");
+     		if(cont === numTen){
+     			alert("Excedido número de tentativas");
+     		}
+    	}
+    	cont += 1;
+    }	
+</script>

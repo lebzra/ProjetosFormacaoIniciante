@@ -1,0 +1,26 @@
+<meta charset="UTF-8">
+<script type="text/javascript">
+
+	function pulaLinha(){
+		document.write('<br>');
+	}
+
+	function exibeTitulo(titulo){
+		document.write('<h1>'+titulo+'</h1>');
+		pulaLinha();
+	}
+
+	function exibeParagrafo(paragrafo){
+		document.write('<p>'+'<b>'+ paragrafo+'</b>'+'</p>');
+		pulaLinha();
+	}
+
+	function contaGeracoes(){
+		var qtdGeracoes = (2021 - 1500) / 28;
+		return qtdGeracoes;
+	}
+
+	exibeTitulo("Problema das Gerações");
+	exibeParagrafo("A quantidade de gerações passadas é: "+Math.floor(contaGeracoes()));
+
+</script>

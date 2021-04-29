@@ -1,0 +1,22 @@
+<meta charset="UTF-8">
+<script type="text/javascript">
+
+	function pulaLinha() { 
+    	document.write("<br><hr><br>");
+	}
+
+	function mostra(frase) {
+    	document.write("<p><big>"+frase+"</big></p>");
+    	pulaLinha();
+	}
+
+	var numLimite = parseInt(prompt("Informe número limite:"));
+	var contador = 0;
+
+	while (contador <= numLimite){
+		mostra("Número Par: "+contador);		
+		contador += 2;
+	}
+	mostra("FIM");
+
+</script>

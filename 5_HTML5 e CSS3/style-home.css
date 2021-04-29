@@ -1,0 +1,207 @@
+
+
+body{
+	font-family: 'Montserrat', sans-serif;
+}
+
+header{
+	background: #BBBBBB;
+	padding: 20px 0;
+}
+nav {
+	position: absolute;
+	top: 110px;
+	right: 0px;
+}
+nav li{
+	display: inline;
+	margin: 0 0 0 15px;
+}
+nav a{
+	text-transform: uppercase;
+	color: #000000;
+	font-weight: bold;
+	font-size: 22px;
+	text-decoration: none;
+}
+nav a:hover{
+	color:#689034;
+	/*text-decoration: underline;
+	*/
+}
+footer{
+	text-align: center;
+	background: url("bg.jpg");
+	padding: 40px 0;
+}
+.conteudo-sobre{
+	padding: 1em 0;
+	background: linear-gradient(#FeFeFe, #eeFFee);
+}
+
+.conteudo-centralizado{
+	margin: 0 auto;
+	width: 940px;
+}
+
+.utensilios{
+	width: 180px;
+	float: left;
+	margin: 0 20px 20px;
+}
+.conteudo-sobre p{
+	margin: 0 0 1em;
+}
+.conteudo-sobre em{
+	font-style: italic;
+}
+.conteudo-sobre strong{
+	font-weight: bold;
+}
+.caixa{ /*Preparar o site - Pixels na tela - Minimo de 940 - para celular é diferente- Resolução do celular
+	diferente da quantidade de pixel por tela (dbi) */
+	width: 940px; /* Valor padrão para monitores e display de 1260 de largura*/
+	position: relative;
+	margin: 0 auto 0 auto;
+}
+.banner{
+	width: 100%;
+}
+.titulo-principal{
+	text-align: center;
+	font-size: 2em;
+	margin: 0 0 1em;
+	clear: left;
+	/*text-shadow: 2px 2px gray;
+	//color: rgba(0,0,0, 0.7);*/
+
+}
+
+/*.titulo-principal:first-letter{
+	font-weight: bold;
+}
+.titulo-principal:before{
+	content: "[ ";
+}
+.titulo-principal:after{
+	content: " ]";
+}
+*/
+/* Seletor abaixo serve para aplicar a configuração a todos os itens p.
+main p{
+	background: red;
+}
+*/
+/* Seletor abaixo serve para configurar os filhos de main somente, algo de outra seça interna não sera alterada.
+main > p{
+	background: orange;
+}
+*/
+/* Seletor abaixo serve para configurar o (UM) elemento específicos após o ancora
+img + p{
+	background: blue;
+}
+*/
+
+/* Seletor abaixo serve para configurar todos elementos específicos após o ancora 
+img ~ p {
+	background: yellow;
+}
+*/
+/*
+.conteudo-sobre p:not(#teste){
+	background: gray;
+}
+*/
+
+/*Uso do calc para o Width, para ajustar a largura da tela conforme o dispositivo para alguma parte específca*/
+
+.item:before{
+	content: "★";
+}
+.mapa{
+	margin: 0 auto;
+	padding: 3em 0;
+	background: linear-gradient(#eeFFee, lightgray) ; /*radial-gradient*/
+}
+.mapa p{
+	margin: 2em 0;
+	text-align: center;
+}
+
+.mapa-conteudo{
+	margin: 0 auto;
+	width: 940px;
+}
+
+.beneficios{
+	padding: 3em 0;
+	background: lightgray;
+	/*box-shadow: inset 0 0 30px #000000;*/
+}
+.conteudo-beneficios{
+	width: 640px;
+	margin: 0 auto;
+}
+
+.lista-beneficios{
+	width: 40%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.imagem-beneficios{
+	width: 60%;
+	opacity: 1;
+	transition: 300ms;
+	box-shadow: 10px 10px 10px 0 #000000; /*,10px 10px yellow, -20px 20px rgba(255,0,0,0.5) colocar mais sombras*/
+	border-radius: 40px;
+}
+
+.imagem-beneficios:hover{
+	opacity: 0.7;
+}
+
+
+.video{
+	width: 560px;
+	margin: 2em auto;
+}
+.item{
+	line-height: 1.5;
+	font-style: italic;
+}
+/*Pseudo elementos CSS3
+:first-child
+:last-child
+:nth-child(4)
+:nth-child(2n) - todos os pares;
+:first-letter;
+:first-line;
+
+*/
+
+
+.item:first-child{
+	font-weight: bold;
+}
+.copyright {
+	color: #FFFFFF;
+	font-size: 13px;
+	margin: 20px 0 0;
+}
+
+@media screen and (max-width: 480px){
+	.caixa, .conteudo-sobre, .conteudo-beneficios, .mapa-conteudo, .video, .conteudo-centralizado{
+		width: auto;
+	}
+	h1{
+		text-align: center;
+	}
+	nav{
+		position: static;
+	}
+	.lista-beneficios, .imagem-beneficios{
+		width: 100%;
+	}
+}

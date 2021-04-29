@@ -1,0 +1,48 @@
+<meta charset="UTF-8">
+<script type="text/javascript">
+	
+	function pulaLinha(){
+		document.write("<hr>");
+	}
+
+	function mostra(texto){
+		document.write("<p>"+ texto + "</p>");
+		pulaLinha();
+	}
+
+	numFamiliares = parseInt(prompt("Numero de familiares:"));
+	
+	/*
+	function calculaMediaF(){
+		var i = 0;
+		var media = 0;
+		for(i = 1; i <= numFamiliares; i++){
+			var idade = parseInt(prompt(i+" - Idade:"));
+			media = media + idade;
+			console.log(media);console.log(i);
+		}
+		//console.log(media);console.log(i);
+		media = media / (i - 1);
+		return media;
+	}
+	*/
+	
+	function calculaMediaF(){
+		var i = 0;
+		var media = 0;
+		while( i < numFamiliares){
+			var idade = parseInt(prompt(i+1 + " - Idade:"));
+			media = media + idade;
+			i++;
+		}
+		media = media / numFamiliares;
+		return media;
+	}
+	
+	var saida = calculaMediaF();
+	
+	mostra("Media de idades é:" +saida);
+	
+	mostra("Fim");
+
+</script>

@@ -1,0 +1,35 @@
+<canvas width="600" height="400"></canvas>
+<script type="text/javascript">
+
+
+	var tela = document.querySelector('canvas');
+	var pincel = tela.getContext('2d');
+
+
+	function desenhaTexto(texto, x, y){
+		pincel.font = '15pt Georgia';
+		pincel.fillStyle = 'black';
+		pincel.fillText(texto, x, y);
+	}
+
+	function desenhaQuadrado(x, y, tamanho, cor){
+		pincel.fillStyle = cor;
+		pincel.fillRect(x, y, tamanho, tamanho);
+		pincel.strokeStyle = 'black';
+		pincel.strokeRect(x, y, tamanho, tamanho);
+	}
+
+	function formaDesenhoFracao(){
+		var x = 0;
+		var y = 50;
+		var tamanho = 50;
+
+		desenhaQuadrado(x, y, tamanho, 'green');
+		desenhaQuadrado(x + 50, y, tamanho, 'green');
+		desenhaQuadrado(x + 100, y, tamanho, 'green');
+		desenhaQuadrado(x + 150, y, tamanho, 'white');
+	}
+
+	desenhaTexto("Qual é a fração?",30, 30);
+	formaDesenhoFracao();
+</script>

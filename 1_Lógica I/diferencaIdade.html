@@ -1,0 +1,35 @@
+<meta charset="UTF-8">
+<script type="text/javascript">
+
+	function pulaLinha(){
+		document.write("<br>");
+	}
+
+	function exibeTitulo(titulo){
+		document.write('<h1>'+titulo+'</h1>');
+		pulaLinha();
+	}
+
+	function exibeParagrafo(paragrafo){
+		document.write('<p>'+'<b>'+ paragrafo+'</b>'+'</p>');
+		pulaLinha();
+	}
+
+	function avaliaIdadeIrmao(idade1, idade2){
+		var x = 0;
+		if (idade1 > idade2){
+			x = idade1 - idade2;
+			return x;
+		}
+		if (idade2 > idade1){
+			x = idade2 - idade1;
+			return x;
+		}else{
+			return "Mesma idade";
+		}
+	}
+
+	exibeTitulo("Diferença de idade");
+	exibeParagrafo("A Diferença de idade entre eu e meu irmão é: "+avaliaIdadeIrmao(33,23));
+
+</script>

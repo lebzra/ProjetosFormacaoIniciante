@@ -1,0 +1,24 @@
+<meta charset ="UTF-8">
+<input/>
+<button>Compare com o valor</button>
+
+<script type="text/javascript">
+
+	var valor = Math.round(Math.random() * 10);
+	var inputE = document.querySelector("input");
+	inputE.focus();
+	
+	function verifica(){
+	
+			if (inputE.value == valor){ // === não funciona, pois o conteudo não é verificado como algum ooutro valor vindo do componente, //sem ser número ou string, usar o ==.
+				alert("Você acertou");
+			}else{
+				alert("Você errou");
+			}
+			inputE.value = "";
+			inputE.focus();
+	}
+	var button = document.querySelector("button");
+	button.onclick = verifica;
+
+</script>

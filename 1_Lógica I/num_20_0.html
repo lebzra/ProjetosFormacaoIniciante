@@ -1,0 +1,23 @@
+<meta charset="UTF-8">
+<script type="text/javascript">
+
+	function pulaLinha() { 
+    	document.write("<hr>");
+	}
+
+	function mostra(frase) {
+    	document.write("<p>"+frase+"</p>");
+    	pulaLinha();
+	}
+
+	var numInicial = parseInt(prompt("Informe número inicial:"));
+	var numLimite = parseInt(prompt("Informe número limite:"));
+	
+	while(numInicial >= numLimite){
+		mostra("Número:"+numInicial);
+		numInicial -= 1;
+	}
+
+	mostra("FIM");
+
+</script>

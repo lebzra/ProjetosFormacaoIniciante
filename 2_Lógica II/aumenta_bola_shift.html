@@ -1,0 +1,48 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+    var escolheCor = 0;
+    var raio = 10;
+    var cores = ['blue', 'red', 'green'];
+    pincel.fillStyle = 'grey';
+    pincel.fillRect(0, 0, 600, 400);
+
+    function desenhaCirculo(evento) {
+
+        var x = evento.pageX - tela.offsetLeft;
+        var y = evento.pageY - tela.offsetTop;
+        //var raio = 10; - para manter o valor padrão 10. Para deixar que a bola aumente a cada Shift pressionado, retirno a inicialização padrão em 10 toda a vez.
+
+        pincel.fillStyle = cores[escolheCor];
+
+        if (evento.shiftKey && raio <= 40){
+            raio = raio + 10;
+        }
+
+        if (evento.altKey && raio > 10){
+            raio = raio - 5;
+        }
+
+        pincel.beginPath();
+        pincel.arc(x, y, raio, 0, 2 * 3.14);
+        pincel.fill();
+        console.log(x + ',' + y);
+    }
+
+    tela.onclick = desenhaCirculo;
+
+    function mudaCor() {
+
+        escolheCor++;
+        if (escolheCor >= cores.length){
+            escolheCor = 0;
+        }
+        return false;
+        //alert('Funcionou! '+escolha);
+    }
+
+    tela.oncontextmenu = mudaCor;
+
+</script>

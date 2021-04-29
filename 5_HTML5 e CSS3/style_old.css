@@ -1,0 +1,70 @@
+header{
+	background: #BBBBBB;
+	padding: 20px;
+}
+
+footer{
+	text-align: center;
+	background: url("bg.jpg");
+	padding: 40px 0;
+}
+
+.caixa{
+	width: 940px; /* Valor padrão para monitores e display de 1260 de largura*/
+	position: relative;
+	margin: 0 auto 0 auto;
+}
+
+.copyright {
+	color: #FFFFFF;
+	font-size: 13px;
+	margin: 20px 0 0;
+}
+
+#missao {
+	font-size: 20px;
+}
+
+#banner{
+	width: 100%;
+}
+
+.item{
+	font-style: italic;
+}
+
+.beneficios{
+	background: #FFFFFF;
+
+}
+
+.principal{
+	background: #CCCCCC;
+	padding: 30px;
+}
+
+.imagemBeneficios{
+	width: 50%;
+}
+
+ .titulo-centralizado{
+ 	text-align: center;
+}
+.titulo-principal{
+ 	padding-left: 20px;
+}
+p {
+	text-align: center;
+}
+em strong{
+	color: #FF0000;
+}
+
+
+ul {
+	display: inline-block;
+	vertical-align: top;
+	width: 20%;
+	margin-right: 15%;
+}
+

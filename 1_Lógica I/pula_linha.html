@@ -1,0 +1,25 @@
+<meta charset="UTF-8">
+<script>
+
+	function pulaLinha(){
+		//alert('OK')
+		document.write("<br>");
+		document.write("<br>");
+	}
+
+	function mostra(texto){
+		
+		if(texto === undefined){		
+			return mostra("Continua..");
+		}else{
+			document.write(texto);
+			pulaLinha();
+		}
+	}
+
+	mostra("Esse documento está usando função");
+	mostra("Texto novo");
+	mostra("JS")
+	mostra();
+
+</script>

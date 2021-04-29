@@ -1,0 +1,36 @@
+
+<meta charset="UTF-8">
+<script type="text/javascript">
+	
+	function pulaLinha(){
+		document.write("<hr>");
+	}
+
+	function mostra(texto){
+		document.write("<p>"+ texto + "</p>");
+		pulaLinha();
+	}
+
+	function geraSorteio(){
+		var numPensado = Math.round(Math.random()*10);
+		console.log(numPensado);
+		return numPensado;
+	}
+	var sorteio = geraSorteio();
+
+	function verificarJogo(){
+		var tentativas = 1;
+		while(tentativas <= 3){
+			var chute = parseInt(prompt("Digite um número:"));	
+			if (chute === sorteio){
+				mostra("Você acertou!! ,"+sorteio);
+				tentativas = 3;
+			}else{
+			     mostra("Você errou, você tem mais chances para tentar.");
+			     tentativas++;
+            }
+		}
+    }
+    verificarJogo();
+	mostra("Fim");
+</script>

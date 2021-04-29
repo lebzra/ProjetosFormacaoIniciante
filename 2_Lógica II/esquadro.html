@@ -1,0 +1,31 @@
+<canvas width="600" height="600"></canvas>
+
+<script type="text/javascript">
+	
+	var tela = document.querySelector('canvas');
+	var pincel = tela.getContext('2d');
+
+	//tela = canvas
+	pincel.fillStyle = 'lilac';
+	pincel.fillRect(0, 0, 600, 600);
+
+	// Triângulo maior
+	pincel.fillStyle = 'yellow';
+	pincel.beginPath();
+	pincel.moveTo(50, 50);
+	pincel.lineTo(50, 550);
+	pincel.lineTo(550, 550);
+	pincel.fill();
+
+	//Triângulo menor
+	pincel.fillStyle = 'white';
+	pincel.beginPath();
+	pincel.moveTo(100, 175);
+	pincel.lineTo(100, 500);
+	pincel.lineTo(425, 500);
+	pincel.fill();
+
+	// 100 - xa = 50
+	//       ya = 500
+
+</script>

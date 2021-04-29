@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BioRhyme&amp;family=Space+Mono&amp;display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <title>Ceep</title>
+</head>
+<body>
+  <div class="app">
+    <div class="todo-list">
+      <h1 class="title">
+        Ceep
+      </h1>
+      <form class="form" action="">
+        <input class="form-input" type="text" data-form-input>
+        <button class="form-button" data-form-button> Novo Item </button> <!-- data attributes usado para manipular
+        o elemento no JS-->
+      </form>
+      <ul class="list" data-list> 
+        <!--<li class="task" data-task>
+          <p class="content">Mostrando um valor</p>
+        </li>
+      -->
+      </ul>
+    </div>
+    <script type="module" src="main.js"></script>
+    <!--Erro devidor CORS - same origin policy
+    https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy - 
+    Para contornar esse erro de segurança do Navegador, usamos o liveServer - reload Window - Go live
+    npmjs.com - live server 
+    https://code.visualstudio.com/docs/java/java-tomcat-jetty 
+    https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer
+    https://medium.com/collabcode/liveserver-vscode-pode-te-salvar-um-bom-tempo-bdb6ddcc0ca
+    https://medium.com/@svinkle/start-a-local-live-reload-web-server-with-one-command-72f99bc6e855
+    https://www.youtube.com/watch?v=FHOcQdu1iFM - instalar no windows e executar pelo cmd
+    -->
+</body>
+</html>

@@ -1,0 +1,22 @@
+<canvas width="600" height="400"></canvas>
+<script type="text/javascript">
+
+	var tela = document.querySelector("canvas");
+	var pincel = tela.getContext('2d');
+	
+	function desenhaQuadradoVerde(x, y){
+		pincel.fillStyle = 'green';
+		pincel.fillRect(x, y, 50, 50);
+		pincel.strokeStyle = 'Lime'
+		pincel.strokeRect(x, y, 50, 50);
+
+	}
+
+	desenhaQuadradoVerde(0, 0);
+	desenhaQuadradoVerde(50, 0);
+	desenhaQuadradoVerde(100, 0);
+	desenhaQuadradoVerde(0, 50);
+	desenhaQuadradoVerde(0, 100);
+	
+	
+</script>
